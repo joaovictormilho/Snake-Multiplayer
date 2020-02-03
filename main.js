@@ -14,12 +14,13 @@ window.onload = function() {
     var ax = ay = Math.floor(Math.random()*10); // Posição
 
     class Cobra {
+        
         constructor(color) {
             this.vx = this.vy = 0; // Movimentação
             this.px = this.py = Math.floor(Math.random()*10); // Posição
             this.keyPressed = null;
             this.trail = []; // Rastro
-            this.tail = undefined; // Tamanho
+            this.tail = 3; // Tamanho
             this.color = color; // Cor
             this.score = 0;
         }
@@ -52,6 +53,7 @@ window.onload = function() {
                     this.score = 0;
                     this.vx = this.vy = 0;
                     this.tail = 3;
+                    this.keyPressed = null;
                 }
             }
         }
@@ -67,8 +69,8 @@ window.onload = function() {
             if (ax == this.px && ay == this.py) {
                 this.score += 1;
                 this.tail++;
-                ax = Math.floor(Math.random() * qp);
-                ay = Math.floor(Math.random() * qp);
+                ax = Math.floor(Math.random() * 10);
+                ay = Math.floor(Math.random() * 10);
             }
         }
 
@@ -112,13 +114,26 @@ window.onload = function() {
             }
 
         }
+
+        fruit() {
+            var x = Math.floor(Math.random() * 10);
+            for (let i = 0; i < this.tail; i++) {
+                if(x == this.trail[i].x) {
+                     console.log('igual');
+                     var x = Math.floor(Math.random() * 10);
+                     i = 0;
+                }
+            }
+            return x;
+        }
     }
 
     var snakeList = [];
     const c1 = new Cobra('rgb(50,110,140)');
     const c2 = new Cobra('saddlebrown');
     //const c3 = new Cobra('gold');
-    snakeList.push(c1,c2);
+    snakeList.push(c1);
+    snakeList.push(c2);
 
     function scoreBoard() {
 
@@ -149,7 +164,7 @@ window.onload = function() {
         ctx.fillStyle = "darkgray"; // Cor da fruta
         ctx.fillRect(ax*tp, ay*tp, tp,tp);
 
-        //  Inicializa cobras
+        //  Metodos das cobra(s)
         for (let i = 0; i < snakeList.length; i++) {
             snakeList[i].moveSnake();
             snakeList[i].testLimts();
@@ -165,6 +180,6 @@ window.onload = function() {
         c2.keyMove(event,65,87,68,83);
         //c3.keyMove(event,74,73,76,75);
     }
-}
 
-stage.oncontextmenu = () => false;
+    stage.oncontextmenu = () => false;
+}
