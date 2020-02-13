@@ -7,11 +7,11 @@ window.onload = function() {
     const vel = 1; // Não mudar
 
     // Variaveis Tabuleiro
-    var tp = 20; // Tamanho
+    var tp = 20; // Tamanho das peças
     var qp = 30; // Quantidade de peças
 
     // Variaveis fruta
-    var ax = ay = Math.floor(Math.random()*10); // Posição
+    var ax = ay = Math.floor(Math.random()*10); // Posições da fruta
 
     class Cobra {
         
@@ -114,18 +114,6 @@ window.onload = function() {
             }
 
         }
-
-        fruit() {
-            var x = Math.floor(Math.random() * 10);
-            for (let i = 0; i < this.tail; i++) {
-                if(x == this.trail[i].x) {
-                     console.log('igual');
-                     var x = Math.floor(Math.random() * 10);
-                     i = 0;
-                }
-            }
-            return x;
-        }
     }
 
     var snakeList = [];
@@ -161,7 +149,7 @@ window.onload = function() {
         ctx.fillRect(0,0, stage.width, stage.height);
 
         //  Pinta fruta
-        ctx.fillStyle = "darkgray"; // Cor da fruta
+        ctx.fillStyle = "darkgray";
         ctx.fillRect(ax*tp, ay*tp, tp,tp);
 
         //  Metodos das cobra(s)
@@ -181,5 +169,5 @@ window.onload = function() {
         //c3.keyMove(event,74,73,76,75);
     }
 
-    stage.oncontextmenu = () => false;
+    stage.oncontextmenu = () => false; // Desabilita o menu de contexto no canvas.
 }
