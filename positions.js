@@ -37,6 +37,10 @@ function setFruitPositions() {
     ay = axy[1];
 }
 
+function setGoldFruitPosition() {
+    goldxy = generatesPosition();
+}
+
 function setSnakePositions() {
     for (const snake of snakeList) {
         axy = generatesPosition();

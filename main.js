@@ -6,9 +6,10 @@ var ctx = stage.getContext("2d");
 var tp = 20; // Tamanho das peças
 var qp = 30; // Quantidade de peças
 
-// Variaveis fruta
+// Variaveis frutas
 var axy = [];
 var ax, ay;
+var goldxy = [-1, -1];
 
 // Declaração das cobras
 var snakeList = [], c1, c2;
@@ -34,8 +35,25 @@ function scoreBoard() {
     }
 }
 
-function game() {
+function superFruit() {
+    var select = Math.floor(Math.random() * 2);
 
+    switch (select) {
+        case 0:
+            setGoldFruitPosition();
+            
+            break;
+        case 1:
+            
+            break;
+    
+        default:
+            break;
+    }
+}
+
+function game() {
+    
     ctx.clearRect(0, 0, stage.width, stage.length);
 
     scoreBoard();
@@ -47,8 +65,14 @@ function game() {
     drawWalls();
 
     //  Pinta fruta
-    ctx.fillStyle = "gold";
+    ctx.fillStyle = "red";
     ctx.fillRect(ax * tp, ay * tp, tp, tp);
+    
+
+    // Pinta fruta dourada
+    ctx.fillStyle = 'gold';
+    ctx.fillRect(goldxy[0] * tp, goldxy[1] * tp, tp, tp);
+    
 
     //  Ligar a(s) cobra(s)
     for (let i = 0; i < snakeList.length; i++) {
@@ -64,4 +88,5 @@ document.onkeydown = function(event) {
 }
 
 setInterval(game, 80);
+setInterval(superFruit, 20000);
 stage.oncontextmenu = () => false; // Desabilita o menu de contexto no canvas.

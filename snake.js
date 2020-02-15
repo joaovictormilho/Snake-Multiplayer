@@ -53,9 +53,8 @@ class Snake {
 
     autoCrashTest() {
         for (var i = 0; i < this.trail.length; i++) {
-            if (this.trail[i].x == this.px && this.trail[i].y == this.py) {
+            if (this.trail[i].x == this.px && this.trail[i].y == this.py)
                 this.reset();
-            }
         }
     }
 
@@ -80,9 +79,14 @@ class Snake {
 
     testEat() {
         if (ax == this.px && ay == this.py) {
-            this.score += 1;
+            this.score ++;
             this.tail++;
             setFruitPositions();
+        }
+        if (goldxy[0] == this.px && goldxy[1] == this.py) {
+            this.score += 3;
+            this.tail += 3;
+            goldxy = [-1,-1] // Faz com que a fruta desapareça
         }
     }
 
