@@ -38,3 +38,19 @@ function paintSnake(snake) {
 function clearScreen(params) {
     ctx.clearRect(0, 0, stage.width, stage.length); // Limpa a tela
 }
+
+function changingColor(snake) {
+    const colors = ['red','blue','green','gold','purple','orange'];
+    var color = colors[Math.floor(Math.random() * 6)];
+
+    snake.color = color;
+}
+
+function turnOffChangingColors(cobra) {
+    let timeChangingColor = 40000   ;
+
+    setTimeout(() => {
+        cobra.isChangingColor = false;
+        cobra.color = cobra.colorB;
+    }, timeChangingColor);
+}

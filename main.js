@@ -35,4 +35,4 @@ function game() {
 }
 
 setInterval(game, 80);
-stage.oncontextmenu = () => false; // Desabilita o menu de contexto no canvas.
+stage.oncontextmenu = () => false; // Desabilita o menu de contexto no canvas

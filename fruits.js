@@ -18,4 +18,4 @@ function superFruit() {
     }
 }
 
-setInterval(superFruit, 20000);
+setInterval(superFruit, 2000);
