@@ -47,7 +47,7 @@ function changingColor(snake) {
 }
 
 function turnOffChangingColors(cobra) {
-    let timeChangingColor = 40000   ;
+    let timeChangingColor = 4000;
 
     setTimeout(() => {
         cobra.isChangingColor = false;
