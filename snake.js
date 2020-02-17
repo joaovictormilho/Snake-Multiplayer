@@ -87,47 +87,6 @@ class Snake {
         // toDo
     }
 
-    keyTest(event, left, up, right, down) {
-        switch (event.keyCode) {
-            case left:
-                this.vx = -1;
-                this.vy = 0;
-                this.keyPressed = left;
-                break;
-            case up:
-                this.vx = 0;
-                this.vy = -1;
-                this.keyPressed = up;
-                break;
-            case right:
-                this.vx = 1;
-                this.vy = 0;
-                this.keyPressed = right;
-                break;
-            case down:
-                this.vx = 0;
-                this.vy = 1;
-                this.keyPressed = down;
-                break;
-            default:
-                break;
-        }
-    }
-
-    keyMove(event, left, up, right, down) {
-        if (event.keyCode < 41 && event.keyCode > 36) {
-            if (event.keyCode != this.keyPressed - 2 && event.keyCode != this.keyPressed + 2) {
-                this.keyTest(event, left, up, right, down);
-            }
-        }
-        else {
-            if (event.keyCode != this.keyPressed + 3 && event.keyCode != this.keyPressed - 3 && event.keyCode != this.keyPressed + 4 && event.keyCode != this.keyPressed - 4) {
-                this.keyTest(event, left, up, right, down);
-            }
-        }
-
-    }
-
     turnOn() {
         this.moveSnake();
         if (this.isMoving()) {
