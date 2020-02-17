@@ -63,13 +63,6 @@ class Snake {
         this.py += this.vy;
     }
 
-    drawSnake() {
-        ctx.fillStyle = this.color;
-        for (var i = 0; i < this.trail.length; i++) {
-            ctx.fillRect(this.trail[i].x * tp, this.trail[i].y * tp, tp - 1, tp - 1);
-        }
-    }
-
     growSnake() {
         this.trail.push({ x: this.px, y: this.py });
         while (this.trail.length > this.tail) {
@@ -88,6 +81,10 @@ class Snake {
             this.tail += 3;
             goldxy = [-1,-1] // Faz com que a fruta desapareça
         }
+    }
+
+    colors() {
+        // toDo
     }
 
     keyTest(event, left, up, right, down) {
@@ -139,11 +136,11 @@ class Snake {
             this.testEat();
             this.testWalls();
             this.growSnake();
-            this.drawSnake();
+            paintSnake(this);
         }
         else {
             this.growSnake();
-            this.drawSnake();
+            paintSnake(this);
         }
     }
 }
