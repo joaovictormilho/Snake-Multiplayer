@@ -92,20 +92,27 @@ class Snake {
     testEatOther() {
         if (this.isChangingColor) {
             if (this == snakeList[0]) {
-                for (var i = 0; i < c2.trail.length; i++) {
-                    if (c2.trail[i].x == this.px && c2.trail[i].y == this.py) {
-                        c2.trail.shift();
-                        c2.tail--;
+                if (c2.tail > 3) {
+                    for (var i = 0; i < c2.trail.length; i++) {
+                        if (c2.trail[i].x == this.px && c2.trail[i].y == this.py) {
+                            c2.trail.shift();
+                            c2.tail--;
+                            c2.score--;
+                        }
                     }
                 }
             }
-            else
-                for (var i = 0; i < c1.trail.length; i++) {
-                    if (c1.trail[i].x == this.px && c1.trail[i].y == this.py) {
-                        c1.trail.shift();
-                        c1.tail--;
+            else{
+                if (c1.tail > 3) {
+                    for (var i = 0; i < c1.trail.length; i++) {
+                        if (c1.trail[i].x == this.px && c1.trail[i].y == this.py) {
+                            c1.trail.shift();
+                            c1.tail--;
+                            c1.score--;
+                        }
                     }
-                }
+                } 
+            }
         }
     }
 
