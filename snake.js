@@ -74,19 +74,28 @@ class Snake {
 
     testEat() {
 
-        if (ax == this.px && ay == this.py) {
+        if (ax == this.px && ay == this.py) { // Testa se comeu a fruta
             this.score ++;
             this.tail++;
             setFruitPositions();
         }
 
-        if (goldxy[0] == this.px && goldxy[1] == this.py) {
+        if (goldxy[0] == this.px && goldxy[1] == this.py) { // Testa se comeu a fruta dourada
             this.isChangingColor = true;
-            this.score += 3;
-            this.tail += 3;
-            goldxy = [-1,-1] // Faz com que a fruta desapareça
+            goldxy = [-1,-1]; // Faz com que a fruta desapareça
             turnOffChangingColors(this);
         }
+
+        for (let i = 0; i < 2; i++) { // Testa se comeu a grande fruta
+            for(let j = 0; j < 2; j++){
+                if (bigxy[0] + i == this.px && bigxy[1] + j == this.py) {
+                    this.score += 4;
+                    this.tail += 4;
+                    bigxy = [-1, -1];
+                }
+            }
+        }
+
     }
 
     testEatOther() {
@@ -98,6 +107,9 @@ class Snake {
                             c2.trail.shift();
                             c2.tail--;
                             c2.score--;
+                            c1.trail.push({ x: this.px, y: this.py });
+                            c1.tail++;
+                            c1.score++;
                         }
                     }
                 }
@@ -109,6 +121,9 @@ class Snake {
                             c1.trail.shift();
                             c1.tail--;
                             c1.score--;
+                            c2.trail.push({ x: this.px, y: this.py });
+                            c2.tail++;
+                            c2.score++;
                         }
                     }
                 } 
@@ -124,7 +139,6 @@ class Snake {
             this.autoCrashTest();
             this.testLimts();
             this.testEat();
-            this.testEatOther();
             this.testWalls();
             this.growSnake();
         }
@@ -133,7 +147,9 @@ class Snake {
 
         paintSnake(this);
 
-        if (this.isChangingColor)
+        if (this.isChangingColor) {
+            this.testEatOther();
             setInterval(changingColor(this), 120);
+        }
     }
 }

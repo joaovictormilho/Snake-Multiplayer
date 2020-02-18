@@ -1,3 +1,4 @@
+
 var snakeList = [], c1, c2;
 snakeList.push(c1 = new Snake('Player 1','rgb(50,110,140)'));
 snakeList.push(c2 = new Snake('Player 2','saddlebrown'));
@@ -28,6 +29,7 @@ function game() {
     drawWalls();
     paintFruit();
     paintGoldFruit(goldxy[0],goldxy[1]);
+    paintBigFruit(bigxy[0], bigxy[1]);
     
     //  "Ligar" a(s) cobra(s)
     for (let i = 0; i < snakeList.length; i++)

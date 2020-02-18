@@ -1,3 +1,4 @@
+
 function keyTest(event, snake, left, up, right, down) {
     switch (event.keyCode) {
         case left:

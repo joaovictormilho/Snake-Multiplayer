@@ -1,21 +1,19 @@
+
 var axy = [];
 var ax, ay;
 var goldxy = [-1, -1];
+var bigxy = [-1, -1];
 
 function superFruit() {
-    var select = 0; //Math.floor(Math.random() * 2);
 
-    switch (select) {
-        case 0:
-            setGoldFruitPosition();
-            break;
-        case 1:
+    var select = Math.floor(Math.random() * 10);
 
-            break;
+    if (select == 0)
+        setGoldFruitPosition();
+    else if (select > 0)
+        setBigFruitPosition();
 
-        default:
-            break;
-    }
+    setTimeout(setToZeroFruitsPosition,3000);
 }
 
-setInterval(superFruit, 20000);
+setInterval(superFruit, 10000);
