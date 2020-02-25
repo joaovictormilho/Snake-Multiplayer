@@ -30,3 +30,16 @@ body {
     text-align: center;
     color: saddlebrown;
 }
+
+#btns {
+    height: 100px;
+    background-color: red;
+    margin-top: 25%;
+}
+
+#btns div {
+    height: 100px;
+    background-color: blue;
+    width: 100px;
+    display: inline-block;
+}
