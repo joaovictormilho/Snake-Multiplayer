@@ -44,4 +44,7 @@ document.onkeydown = function (event) {
 
     keyMove(event, c1, 37, 38, 39, 40);
     keyMove(event, c2, 65, 87, 68, 83);
+    
+    if (event.keyCode == 16)
+        setBigFruitPosition();  
 }

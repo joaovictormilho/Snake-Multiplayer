@@ -3,6 +3,7 @@ var axy = [];
 var ax, ay;
 var goldxy = [-1, -1];
 var bigxy = [-1, -1];
+var testxy = [-1, -1];
 
 function superFruit() {
 

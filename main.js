@@ -30,6 +30,7 @@ function game() {
     paintFruit();
     paintGoldFruit(goldxy[0],goldxy[1]);
     paintBigFruit(bigxy[0], bigxy[1]);
+    paintTestFruit(testxy[0], testxy[1]); // Fruta usada para testes
     
     //  "Ligar" a(s) cobra(s)
     for (let i = 0; i < snakeList.length; i++)
@@ -37,4 +38,4 @@ function game() {
 }
 
 setInterval(game, 80);
-stage.oncontextmenu = () => false; // Desabilita o menu de contexto no canvas
+stage.oncontextmenu = () => false; // Desabilita o menu de contexto no canvas 

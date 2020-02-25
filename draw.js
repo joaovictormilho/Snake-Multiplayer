@@ -37,6 +37,13 @@ function paintBigFruit(x, y) {
     }
 }
 
+function paintTestFruit(x, y) { // Fruta usada para testes
+    if (x > -1 && y > -1) {
+        ctx.fillStyle = 'gray';
+        ctx.fillRect(testxy[0] * tp, testxy[1] * tp, tp * 2, tp * 2)
+    }
+}
+
 function paintSnake(snake) {
     ctx.fillStyle = snake.color;
     for (var i = 0; i < snake.trail.length; i++) {

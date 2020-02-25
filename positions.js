@@ -14,7 +14,9 @@ function generatesPosition() {
         if(snake.trail.length > 0){
             for (let i = 0; i < snake.trail.length; i++) {
 
-                if (position[0] == snake.trail[i].x && position[1]  == snake.trail[i].y) // TOFIX: não deixar a fruta grande sobrepor as cobras.
+                if (position[0] == snake.trail[i].x && position[1] == snake.trail[i].y 
+                || position[0] == snake.trail[i].x - 1 && position[1] == snake.trail[i].y 
+                || position[0] == snake.trail[i].x && position[1] == snake.trail[i].y - 1)
                     position = generatesPosition();
             }
         }
@@ -27,7 +29,7 @@ function generatesPosition() {
     if (position[0] == ax && position[1] == ay) // Testa se a nova posição sobrepoe a fruta
         position = generatesPosition();
 
-    if (position[1] > stage.height / tp - 3 || position[0] > stage.width / tp -3) // Testa se a posição da fruta grande sobrepoe as paredes
+    if (position[1] > qp - 3 || position[0] > qp - 3) // Testa se a posição da fruta grande sobrepoe as paredes 
         position = generatesPosition();
         
     return position;
