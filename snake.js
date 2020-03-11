@@ -54,7 +54,7 @@ class Snake {
     }
 
     autoCrashTest() {
-        for (var i = 0; i < this.trail.length; i++) {
+        for (let i = 0; i < this.trail.length; i++) {
             if (this.trail[i].x == this.px && this.trail[i].y == this.py)
                 this.reset();
         }
@@ -102,7 +102,7 @@ class Snake {
         if (this.isChangingColor) {
             if (this == snakeList[0]) {
                 if (c2.tail > 3) {
-                    for (var i = 0; i < c2.trail.length; i++) {
+                    for (let i = 0; i < c2.trail.length; i++) {
                         if (c2.trail[i].x == this.px && c2.trail[i].y == this.py) {
                             c2.trail.shift();
                             c2.tail--;
@@ -116,7 +116,7 @@ class Snake {
             }
             else{
                 if (c1.tail > 3) {
-                    for (var i = 0; i < c1.trail.length; i++) {
+                    for (let i = 0; i < c1.trail.length; i++) {
                         if (c1.trail[i].x == this.px && c1.trail[i].y == this.py) {
                             c1.trail.shift();
                             c1.tail--;

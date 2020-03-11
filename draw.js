@@ -46,7 +46,7 @@ function paintTestFruit(x, y) { // Fruta usada para testes
 
 function paintSnake(snake) {
     ctx.fillStyle = snake.color;
-    for (var i = 0; i < snake.trail.length; i++) {
+    for (let i = 0; i < snake.trail.length; i++) {
         ctx.fillRect(snake.trail[i].x * tp, snake.trail[i].y * tp, tp - 1, tp - 1);
     }
 }
@@ -57,7 +57,7 @@ function clearScreen(params) {
 
 function changingColor(snake) {
     const colors = ['red','blue','green','gold','purple','orange'];
-    var color = colors[Math.floor(Math.random() * 6)];
+    let color = colors[Math.floor(Math.random() * 6)];
 
     snake.color = color;
 }

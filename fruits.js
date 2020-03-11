@@ -7,7 +7,7 @@ var testxy = [-1, -1];
 
 function superFruit() {
 
-    var select = Math.floor(Math.random() * 10);
+    let select = Math.floor(Math.random() * 10);
 
     if (select == 0)
         setGoldFruitPosition();

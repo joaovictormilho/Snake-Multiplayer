@@ -3,7 +3,7 @@ function generatesPosition() {
 
     // Essa função gera uma posição que(teoricamente, rs) não sobrepõe nenhum elemento
 
-    var position = [Math.floor(Math.random() * qp), Math.floor(Math.random() * qp)]; // [x, y]
+    let position = [Math.floor(Math.random() * qp), Math.floor(Math.random() * qp)]; // [x, y]
 
     for (let i = 0; i < walls.length; i++) { // Testa se a nova posição sobrepoe as paredes
         if (position[0] * tp == walls[i].x && position[1] * tp == walls[i].y)

@@ -57,7 +57,7 @@ stage1();
 
 function drawWalls() {
 
-    var wallColor = 'lightgray';
+    let wallColor = 'lightgray';
     ctx.fillStyle = wallColor;
 
     for (let i = 0; i < walls.length; i++) {
