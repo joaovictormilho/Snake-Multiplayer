@@ -1,4 +1,12 @@
 # Snake-Multiplayer
 
 ## Comandos
-  Jogador 1: ![](https://img2.gratispng.com/20180422/pge/kisspng-computer-keyboard-arrow-keys-clip-art-5adca312ee3014.5868969515244091069756.jpg)
+  Jogador 1: Use as setas do teclado
+  Jogador 2: Use os botões WASD
+
+## Fruits
+  Fruit: uma fruta vermelha comum, adiciona um quadrado ao tamanho da sua cobra. Uma dessa aparece a cada 3 segundos.
+  
+  ###Super Fruits: Uma das super fruits aparece a cada 10 segundos, sendo elas:
+    Big Fruit: Uma fruta vermelha grande, adiciona 4 quadradados ao tamanho da sua cobra.
+    Gold Fruit: Uma fruta dourada que adiciona temporariamente à sua cobra, a capacidade de comer quadrados do seu adversário.
