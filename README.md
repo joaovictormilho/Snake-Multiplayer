@@ -1,8 +1,8 @@
 # Snake-Multiplayer
 
 ## Comandos
-  -Jogador 1: Use as setas do teclado  
-  -Jogador 2: Use os botões WASD
+-Jogador 1: Use as setas do teclado  
+-Jogador 2: Use os botões WASD
 
 ## Fruits
 -Red Fruit: uma fruta vermelha comum, adiciona um quadrado ao tamanho da sua cobra. Uma dessa aparece a cada 3 segundos.
