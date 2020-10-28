@@ -5,9 +5,9 @@
   Jogador 2: Use os botões WASD
 
 ## Fruits
-  Fruit: uma fruta vermelha comum, adiciona um quadrado ao tamanho da sua cobra. Uma dessa aparece a cada 3 segundos.
+Fruit: uma fruta vermelha comum, adiciona um quadrado ao tamanho da sua cobra. Uma dessa aparece a cada 3 segundos.
   
-  ### Super Fruits
-    Uma das super fruits aparece a cada 10 segundos, sendo elas:
-    Big Fruit: Uma fruta vermelha grande, adiciona 4 quadradados ao tamanho da sua cobra.
-    Gold Fruit: Uma fruta dourada que adiciona temporariamente à sua cobra, a capacidade de comer quadrados do seu adversário.
+## Super Fruits
+  Uma das super fruits aparece a cada 10 segundos, sendo elas:
+  Big Fruit: Uma fruta vermelha grande, adiciona 4 quadradados ao tamanho da sua cobra.
+  Gold Fruit: Uma fruta dourada que adiciona temporariamente à sua cobra, a capacidade de comer quadrados do seu adversário.
