@@ -1,4 +1,4 @@
 # Snake-Multiplayer
 
 ## Comandos
-  Jogador 1: U+2190.svg U+2191.svg U+2192.svg U+2193.svg
+  Jogador 1: <img src=”https://img2.gratispng.com/20180422/pge/kisspng-computer-keyboard-arrow-keys-clip-art-5adca312ee3014.5868969515244091069756.jpg”>
