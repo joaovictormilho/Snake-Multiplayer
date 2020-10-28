@@ -1,7 +1,7 @@
 # Snake-Multiplayer
 
 ## Comandos
-  Jogador 1: Use as setas do teclado
+  Jogador 1: Use as setas do teclado  
   Jogador 2: Use os botões WASD
 
 ## Fruits
