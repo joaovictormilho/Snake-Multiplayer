@@ -10,3 +10,6 @@
 ## Super Fruits
   Big Fruit: Uma fruta vermelha grande, adiciona 4 quadradados ao tamanho da sua cobra.  
   Gold Fruit: Uma fruta dourada que adiciona temporariamente à sua cobra, a capacidade de comer quadrados do seu adversário.
+
+## Jogar
+  https://joaovictormilhomem.github.io/Snake-Multiplayer/
